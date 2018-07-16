@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   namespace :admin do #後台首頁
     root "tweets#index"
+    resources :tweets, only: [:destroy]
+    resources :users, only: [:index]
   end
 
 end
