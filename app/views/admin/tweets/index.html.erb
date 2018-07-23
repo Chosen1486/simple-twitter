@@ -2,10 +2,11 @@
 <%= link_to 'Users', admin_users_path %>
 
 <ul>
- <% @tweets.each do |tweet| %>
-   <li>
-     <%= tweet.description %>
-     <%= link_to 'Destroy', admin_tweet_path(tweet), method: :delete, data:{ confirm: "Are you sure?" } %>
-   </li>
- <% end %>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <%= tweet.user.name %>
+      <%= tweet.description %>
+      <%= link_to 'Destroy', admin_tweet_path(tweet), method: :delete, data:{ confirm: "Are you sure?" } %>
+    </li>  
+  <% end %>
 </ul>
