@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= link_to 'Logo', root_path %>
     <% if current_user %>
       <% if current_user&.admin? %>
         <li><%= link_to 'Admin Panel', admin_root_path %></li>
