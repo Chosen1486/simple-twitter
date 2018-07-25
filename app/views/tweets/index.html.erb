@@ -1,7 +1,7 @@
 <h1>Twitter 前臺</h1>
 
 
-<%= form_for @tweet, :url => tweets_path do |f| %>
+<%= form_for @tweet do |f| %>
   
   <%= f.text_area :description , placeholder: "What's on your mind?" %>
 
